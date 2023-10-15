@@ -1,8 +1,8 @@
-
 class Solution {
     public int calculate(String s) {
-        Stack<Integer> stack = new Stack<>();
+        int result = 0;
         int num = 0;
+        int prevNum = 0;
         char operator = '+';
 
         for (int i = 0; i < s.length(); i++) {
@@ -13,25 +13,28 @@ class Solution {
             }
 
             if ((!Character.isDigit(c) && c != ' ') || i == s.length() - 1) {
-                if (operator == '+') {
-                    stack.push(num);
-                } else if (operator == '-') {
-                    stack.push(-num);
-                } else if (operator == '*') {
-                    stack.push(stack.pop() * num);
-                } else if (operator == '/') {
-                    stack.push(stack.pop() / num);
+                switch (operator) {
+                    case '+':
+                        result += prevNum;
+                        prevNum = num;
+                        break;
+                    case '-':
+                        result += prevNum;
+                        prevNum = -num;
+                        break;
+                    case '*':
+                        prevNum *= num;
+                        break;
+                    case '/':
+                        prevNum /= num;
+                        break;
                 }
                 num = 0;
                 operator = c;
             }
         }
 
-        int result = 0;
-        while (!stack.isEmpty()) {
-            result += stack.pop();
-        }
-
+        result += prevNum;
         return result;
     }
 }
