@@ -5,21 +5,15 @@ class Solution {
             return false;
         }
 
-        // Convert the integer to a string.
-        String strX = String.valueOf(x);
+        int reversed = 0;
+        int originalX = x;
 
-        int left = 0;
-        int right = strX.length() - 1;
-
-        while (left < right) {
-            // Compare characters from the left and right ends of the string.
-            if (strX.charAt(left) != strX.charAt(right)) {
-                return false;
-            }
-            left++;
-            right--;
+        while (x > 0) {
+            int digit = x % 10;
+            reversed = reversed * 10 + digit;
+            x /= 10;
         }
 
-        return true;
+        return originalX == reversed;
     }
 }
