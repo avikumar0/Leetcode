@@ -8,31 +8,27 @@ class Solution {
         int maxPoints = 2; // At least 2 points are needed for a line.
 
         for (int i = 0; i < n; i++) {
-            Map<Double, Integer> slopeCount = new HashMap<>();
-            int duplicate = 0;
+            // int duplicate = 0;
             int localMax = 1;
-
-            for (int j = 0; j < n; j++) {
-                if (i != j) {
-                    if (points[i][0] == points[j][0] && points[i][1] == points[j][1]) {
-                        duplicate++;
-                    } else {
-                        double slope;
-                        if (points[i][0] == points[j][0]) {
-                            slope = Double.POSITIVE_INFINITY;
-                        } else {
-                            slope = (double) (points[i][1] - points[j][1]) / (points[i][0] - points[j][0]);
-                        }
-                        slopeCount.put(slope, slopeCount.getOrDefault(slope, 1) + 1);
-                        localMax = Math.max(localMax, slopeCount.get(slope));
+            
+            for (int j = i + 1; j < n; j++) {
+                int count = 1; // Start with 1 for the current point.
+                for (int k = j + 1; k < n; k++) {
+                    if (isCollinear(points[i], points[j], points[k])) {
+                        count++;
                     }
                 }
+                localMax = Math.max(localMax, count);
             }
 
-            localMax = Math.max(localMax, duplicate) + 1;
+            localMax++;
             maxPoints = Math.max(maxPoints, localMax);
         }
 
-        return maxPoints-1;
+        return maxPoints;
+    }
+
+    private boolean isCollinear(int[] p1, int[] p2, int[] p3) {
+        return (p2[1] - p1[1]) * (p3[0] - p2[0]) == (p3[1] - p2[1]) * (p2[0] - p1[0]);
     }
 }
