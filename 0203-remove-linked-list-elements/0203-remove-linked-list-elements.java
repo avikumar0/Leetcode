@@ -8,7 +8,6 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
         // Create a dummy node to simplify handling the head.
