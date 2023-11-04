@@ -10,26 +10,46 @@
  */
 public class Solution {
     public boolean isPalindrome(ListNode head) {
-        // Create a stack to store the values.
-        Stack<Integer> stack = new Stack<>();
-        
-        // Traverse the linked list and push values onto the stack.
-        ListNode current = head;
-        while (current != null) {
-            stack.push(current.val);
-            current = current.next;
+        if (head == null || head.next == null) {
+            return true; // An empty list or a single-node list is always a palindrome.
         }
 
-        // Traverse the linked list again and compare with the values from the stack.
-        current = head;
-        while (current != null) {
-            if (current.val != stack.pop()) {
+        // Find the middle of the linked list using the slow and fast pointer approach.
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        // Reverse the second half of the linked list.
+        ListNode secondHalf = reverseLinkedList(slow);
+
+        // Compare the first half with the reversed second half.
+        while (secondHalf != null) {
+            if (head.val != secondHalf.val) {
                 return false;
             }
-            current = current.next;
+            head = head.next;
+            secondHalf = secondHalf.next;
         }
 
-        // If all values match, it's a palindrome.
         return true;
     }
+
+    private ListNode reverseLinkedList(ListNode head) {
+        ListNode prev = null;
+        ListNode current = head;
+
+        while (current != null) {
+            ListNode next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+
+        return prev;
+    }
 }
+
