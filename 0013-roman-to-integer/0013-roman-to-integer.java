@@ -42,7 +42,6 @@ class Solution {
 
             prevValue = curValue; // Update the previous value.
         }
-
         return result;
     }
 }
