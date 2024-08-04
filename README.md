@@ -18,4 +18,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1894-merge-strings-alternately](https://github.com/avikumar0/Leetcode/tree/master/1894-merge-strings-alternately) |
+## Array
+|  |
+| ------- |
+| [2350-find-closest-number-to-zero](https://github.com/avikumar0/Leetcode/tree/master/2350-find-closest-number-to-zero) |
 <!---LeetCode Topics End-->
