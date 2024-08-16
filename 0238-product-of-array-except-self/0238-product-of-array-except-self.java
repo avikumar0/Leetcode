@@ -1,20 +1,31 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
-        int l_mult=1;
-        int r_mult=1;
-        int n=nums.length;
-        int[] res=new int[n];
-        for(int i=0;i<n;i++){
-            res[i]=l_mult;
-            l_mult*=nums[i];
+        int n = nums.length;
+        int[] l_arr = new int[n];
+        int[] r_arr = new int[n];
+        
+        // Initialize the products for left and right sides
+        int l_mult = 1;
+        int r_mult = 1;
+        
+        // Calculate left products
+        for (int i = 0; i < n; i++) {
+            l_arr[i] = l_mult;
+            l_mult *= nums[i];
         }
-
-        for(int j=n-1;j>=0;j--){
-            res[j]*=r_mult;
-            r_mult*=nums[j];
+        
+        // Calculate right products
+        for (int i = n - 1; i >= 0; i--) {
+            r_arr[i] = r_mult;
+            r_mult *= nums[i];
         }
-
-        return res;
-
+        
+        // Compute result array
+        int[] result = new int[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = l_arr[i] * r_arr[i];
+        }
+        
+        return result;
     }
 }
