@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/avikumar0/Leetcode/tree/master/0013-roman-to-integer) |
+| [0217-contains-duplicate](https://github.com/avikumar0/Leetcode/tree/master/0217-contains-duplicate) |
 | [0782-jewels-and-stones](https://github.com/avikumar0/Leetcode/tree/master/0782-jewels-and-stones) |
 ## Math
 |  |
@@ -29,6 +30,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0054-spiral-matrix](https://github.com/avikumar0/Leetcode/tree/master/0054-spiral-matrix) |
 | [0056-merge-intervals](https://github.com/avikumar0/Leetcode/tree/master/0056-merge-intervals) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/avikumar0/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0217-contains-duplicate](https://github.com/avikumar0/Leetcode/tree/master/0217-contains-duplicate) |
 | [0228-summary-ranges](https://github.com/avikumar0/Leetcode/tree/master/0228-summary-ranges) |
 | [0238-product-of-array-except-self](https://github.com/avikumar0/Leetcode/tree/master/0238-product-of-array-except-self) |
 | [2350-find-closest-number-to-zero](https://github.com/avikumar0/Leetcode/tree/master/2350-find-closest-number-to-zero) |
@@ -49,6 +51,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0056-merge-intervals](https://github.com/avikumar0/Leetcode/tree/master/0056-merge-intervals) |
+| [0217-contains-duplicate](https://github.com/avikumar0/Leetcode/tree/master/0217-contains-duplicate) |
 ## Matrix
 |  |
 | ------- |
