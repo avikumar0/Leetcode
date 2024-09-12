@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0001-two-sum](https://github.com/avikumar0/Leetcode/tree/master/0001-two-sum) |
 | [0013-roman-to-integer](https://github.com/avikumar0/Leetcode/tree/master/0013-roman-to-integer) |
+| [0036-valid-sudoku](https://github.com/avikumar0/Leetcode/tree/master/0036-valid-sudoku) |
 | [0217-contains-duplicate](https://github.com/avikumar0/Leetcode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/avikumar0/Leetcode/tree/master/0242-valid-anagram) |
 | [0383-ransom-note](https://github.com/avikumar0/Leetcode/tree/master/0383-ransom-note) |
@@ -35,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/avikumar0/Leetcode/tree/master/0001-two-sum) |
+| [0036-valid-sudoku](https://github.com/avikumar0/Leetcode/tree/master/0036-valid-sudoku) |
 | [0054-spiral-matrix](https://github.com/avikumar0/Leetcode/tree/master/0054-spiral-matrix) |
 | [0056-merge-intervals](https://github.com/avikumar0/Leetcode/tree/master/0056-merge-intervals) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/avikumar0/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -64,6 +66,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0036-valid-sudoku](https://github.com/avikumar0/Leetcode/tree/master/0036-valid-sudoku) |
 | [0054-spiral-matrix](https://github.com/avikumar0/Leetcode/tree/master/0054-spiral-matrix) |
 ## Simulation
 |  |
