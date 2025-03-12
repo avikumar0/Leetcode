@@ -1,21 +1,22 @@
 class Solution {
     public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<>();
+        Map<Character,Character> hashmap = new HashMap<>();
+        hashmap.put(')', '(');
+        hashmap.put('}', '{');
+        hashmap.put(']', '[');
+        
 
-        for (char c : s.toCharArray()) {
-            if (c == '(' || c == '{' || c == '[') {
-                stack.push(c);
-            } else {
-                if (stack.isEmpty()) {
-                    return false; // No corresponding open bracket
-                }
-                char top = stack.pop();
-                if ((c == ')' && top != '(') || (c == '}' && top != '{') || (c == ']' && top != '[')) {
-                    return false; // Mismatched brackets
+        Stack<Character> st = new Stack<>();
+        for(char c: s.toCharArray()){
+            if(!hashmap.containsKey(c)){
+                st.push(c);
+            }else{
+                if(st.isEmpty() || st.pop() != hashmap.get(c)){
+                    return false;
                 }
             }
         }
 
-        return stack.isEmpty(); // Stack should be empty if all brackets are matched.
+        return st.isEmpty();
     }
 }
