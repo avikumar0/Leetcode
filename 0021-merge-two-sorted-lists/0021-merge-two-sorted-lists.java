@@ -3,15 +3,15 @@ class Solution {
         if (list1 == null) return list2;
         if (list2 == null) return list1;
 
-        ListNode head;
+        ListNode head = new ListNode();
 
-        if (list1.val < list2.val) {
-            head = list1;
-            list1 = list1.next;
-        } else {
-            head = list2;
-            list2 = list2.next;
-        }
+        // if (list1.val < list2.val) {
+        //     head = list1;
+        //     list1 = list1.next;
+        // } else {
+        //     head = list2;
+        //     list2 = list2.next;
+        // }
 
         ListNode current = head;
 
@@ -32,6 +32,6 @@ class Solution {
             current.next = list2;
         }
 
-        return head;
+        return head.next;
     }
 }
